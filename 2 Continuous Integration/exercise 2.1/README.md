@@ -1,6 +1,7 @@
 # Exercise 2.1: Setup Continuous Integration
 
-In this exercise, you will set up a *Continuous Integration* (CI) workflow using GitHub as a version control system, GitHub Actions as a build tool, and DockerHub as artifact repository manager. This workflow will execute the unit tests of the source code and build the code. To trigger it, a change of the codebase must be performed. 
+In this exercise, you will set up a *Continuous Integration* (CI) workflow using GitHub as the version control system, GitHub Actions as the build tool, and DockerHub as the artifact repository. This workflow will execute the unit tests of the source code and build the code. 
+For triggering the workflow, a change of the codebase must be performed. 
 
 ## Setup
 
@@ -19,7 +20,7 @@ In this exercise, you will set up a *Continuous Integration* (CI) workflow using
 
 ## Instructions
 
-1. Create a **public** GitHub repository called: `mini-ci-example`
+1. Create a **public** GitHub repository called `mini-ci-example`
 
 1. Add and commit `main.go`, `main_test.go`, `fib.go`, `fib_test.go`, and `go.mod` to your repository via drag-and-drop.
 
@@ -34,7 +35,7 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
+  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
   pull_request:
@@ -48,12 +49,12 @@ jobs:
   # This workflow contains a single job called "continuous_integration"
   continuous_integration:
     # The type of runner that the job will run on
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
       - name: Run a one-line script

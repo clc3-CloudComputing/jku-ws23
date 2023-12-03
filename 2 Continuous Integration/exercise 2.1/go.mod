@@ -1,7 +1,4 @@
-module github.com/your-repo/mini-example
+module github.com/agrimmer/mini-ci-example-gh
 
-go 1.13
-
-require (
-)
+go 1.21
 
