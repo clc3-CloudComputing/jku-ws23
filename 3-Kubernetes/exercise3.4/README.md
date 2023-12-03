@@ -1,8 +1,8 @@
 # Exercise 3.4: Creating a Service
 
-In this exercise, you will specify a service for your deployment.
-Therefore, you will use the service types *ClusterIP*, *NodePort*, and *LoadBalancer*.
-The service resource will be crated by defining a service manifest (`service.yaml`) and afterwards 
+In this exercise, you will specify a Service for your Deployment.
+Therefore, you will use the Service types *ClusterIP*, *NodePort*, and *LoadBalancer*.
+The Service resource will be created by defining a service manifest (`service.yaml`) and afterwards 
 applying it to your Kubernetes cluster.
 
 
@@ -113,7 +113,7 @@ applying it to your Kubernetes cluster.
 
     **Note for Google Cloud:**
     You need to create a firewall rule to allow TCP traffic on the node port using
-    `gcloud compute firewall-rules create test-node-port --allow tcp:31425 --target-tags gke-keptn-grimmer-dev-6cb41d0c-node`
+    `gcloud compute firewall-rules create test-node-port --allow tcp:31425 --target-tags gke-grimmer-dev-6cb41d0c-node`
 
 ### LoadBalancer
 **Note for `kind` users:** This service type is not supported.

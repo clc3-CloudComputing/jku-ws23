@@ -40,7 +40,7 @@ In case you have no access to a public cloud (because e.g. you do not have a cre
 
 1. As soon as your cluster is ready, click on *Connect* and copy and paste this command into your terminal
 
-1. Now your `kubectl` (i.e., the Kubernetes command-line tool) should be configured for your cluster. In order to verify this, execute the command: 
+1. Now, your `kubectl` (i.e., the Kubernetes command-line tool) should be configured for your cluster. To verify this, execute the command: 
 
     ```console
     kubectl get nodes

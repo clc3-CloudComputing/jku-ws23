@@ -1,8 +1,8 @@
 # Exercise 3.5: Creating a ConfigMap
 
-In this exercise, you will create a ConfigMap which allows to control the output format of our application.
-More precisely, the ConfigMap will be used to control if the output is in plain text or HTML-formatted.
-Therefore, you will mount the ConfigMap as environment variable in the Pod.
+In this exercise, you will create a ConfigMap, which allows us to control the output format of our application.
+More precisely, the ConfigMap will control if the output is in plain text or HTML-formatted.
+Therefore, you will mount the ConfigMap as an environment variable in the Pod.
 By editing the ConfigMap, you will be able to control the output format without changing the image.
 
 ## Instructions
@@ -24,7 +24,7 @@ By editing the ConfigMap, you will be able to control the output format without 
     kubectl apply -f configmap.yaml
     ```
 
-1. Configure the container inside the Pod by adding an environment varialbe which refers the ConfigMap:
+1. Configure the container inside the Pod by adding an environment variable that refers to the ConfigMap:
 
     ```yaml
     apiVersion: apps/v1
@@ -66,6 +66,8 @@ By editing the ConfigMap, you will be able to control the output format without 
     kubectl port-forward deployment/demo 9999:8888
     ```
 
-    :mag: Now, access the website [http://localhost:9999](http://localhost:9999). Do you see a HTML-formatted output? 
+    :mag: Now, access the website [http://localhost:9999](http://localhost:9999). Do you see an HTML-formatted output? 
 
 1. Change the output format back to *plain*. What is needed that the changes are applied?
+
+1. Mount the ConfigMap as volume and check the files by getting a shell to the running container.

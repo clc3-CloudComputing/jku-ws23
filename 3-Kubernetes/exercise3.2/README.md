@@ -1,6 +1,6 @@
 # Exercise 3.2: Running a Demo App
 
-In this exercise, you will deploy a container in a Kubernetes cluster. Thus, a pod will be created that runs the container. To access the running container, a port forward to a port on your local machine will be conducted. 
+In this exercise, you will deploy a container in a Kubernetes cluster. Thus, a Pod will be created that runs the container. To access the running container, a port forward to a port on your local machine will be conducted. 
 
 ## Requirements
 
@@ -14,7 +14,7 @@ In this exercise, you will deploy a container in a Kubernetes cluster. Thus, a p
     kubectl run demo --image=agrimmer/demo:time
     ```
 
-1. To verify that the container started and the app is running, use:
+1. To verify that the container has started and the app is running, use:
     
     ```console
     kubectl get pods

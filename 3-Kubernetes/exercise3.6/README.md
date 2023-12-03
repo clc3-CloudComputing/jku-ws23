@@ -1,6 +1,6 @@
 # Exercise 3.6: Using Namespaces
 
-In this exercise, you will create a namespace for your Kubernetes resources (i.e., deployments, services, pods). Afterwards, you will modify the deployment manifest from exercise 3.2, to create a deployment in this particular namespace.
+In this exercise, you will create a namespace for your Kubernetes resources (i.e., Deployments, Services, Pods). Afterward, you will modify the deployment manifest from exercise 3.2, to create a deployment in this particular namespace.
 
 ## Instructions
 
@@ -19,7 +19,7 @@ In this exercise, you will create a namespace for your Kubernetes resources (i.e
     kubectl apply -f namespace.yaml
     ```
 
-    * This will create the namespace `demo-environment` where you can add Kubernetes resources (i.e., deployments, services, pods) to.
+    * This will create the namespace `demo-environment` where you can add Kubernetes resources (i.e., deployments, services, pods).
 
 1. Query all your namespaces with the following command and find your newly created namespace:
     ```source
